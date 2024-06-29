@@ -1,2 +1,2 @@
 # UsefulTools
-Share some useful tools
+Share some useful AI tools
