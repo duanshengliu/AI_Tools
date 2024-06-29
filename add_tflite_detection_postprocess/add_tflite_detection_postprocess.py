@@ -1,12 +1,13 @@
 # -*- coding:utf-8 -*-
 import os
+import sys
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 os.environ["CUDA_VISIBILE_DEVICES"] = "-1"
 import tensorflow.compat.v1 as tf
 
-if tf.__version__[0] == "2":
+if tf.__version__[0] > "1":
     print("请使用tensorflow1.15环境")
-    quit()
+    sys.exit(0)
 from tensorflow.core.framework import attr_value_pb2, types_pb2
 from tensorflow.tools.graph_transforms import TransformGraph
 
